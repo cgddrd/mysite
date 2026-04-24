@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from './components/Navigation'
-import Footer from './components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Your Name - Portfolio',
-  description: 'Personal portfolio and blog',
-  authors: [{ name: 'Your Name' }],
+  title: 'Jeremy Davidson',
+  description:
+    'Principal Software Engineer & Engineering Lead at Rocketboots. Edge computing, computer vision, and platform engineering from Oxfordshire, UK.',
+  authors: [{ name: 'Jeremy Davidson' }],
 }
 
 export default function RootLayout({
@@ -18,10 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation />
-        <main className="container">
-          {children}
-        </main>
-        <Footer />
+        <main className="container">{children}</main>
       </body>
     </html>
   )

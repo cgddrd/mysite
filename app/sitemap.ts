@@ -3,7 +3,7 @@ import { getAllPosts } from './lib/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts()
-  const baseUrl = 'https://yoursite.com'
+  const baseUrl = 'https://jeremydavidson.dev'
 
   const postUrls = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -24,12 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
     },
     ...postUrls,
   ]

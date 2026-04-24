@@ -2,39 +2,15 @@ import Link from 'next/link'
 
 export default function Navigation() {
   return (
-    <nav style={{
-      borderBottom: '1px solid var(--border)',
-      marginBottom: 'var(--space-4xl)',
-    }}>
-      <div className="container" style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingTop: 'var(--space-xl)',
-        paddingBottom: 'var(--space-xl)',
-      }}>
-        <Link href="/" style={{
-          fontFamily: 'var(--font-sans)',
-          fontSize: '1rem',
-          fontWeight: 600,
-          color: 'var(--text-primary)',
-          textDecoration: 'none',
-          letterSpacing: '-0.01em',
-        }}>
-          Your Name
+    <nav className="site-nav">
+      <div className="site-nav__inner container">
+        <Link href="/" className="site-nav__wordmark">
+          Jeremy Davidson
         </Link>
-        <div style={{
-          display: 'flex',
-          gap: 'var(--space-xl)',
-          fontFamily: 'var(--font-sans)',
-          fontSize: '0.95rem',
-        }}>
-          <Link href="/blog" style={{ textDecoration: 'none' }}>
-            Writing
-          </Link>
-          <Link href="/about" style={{ textDecoration: 'none' }}>
-            About
-          </Link>
+        <div className="site-nav__links">
+          <Link href="/#projects">Projects</Link>
+          <Link href="/#writing">Writing</Link>
+          <Link href="/#connect">Contact</Link>
         </div>
       </div>
     </nav>

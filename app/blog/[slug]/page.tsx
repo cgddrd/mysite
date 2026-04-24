@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${post.title} - Your Name`,
+    title: `${post.title} — Jeremy Davidson`,
     description: post.excerpt,
   }
 }
@@ -33,22 +33,20 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      <header style={{ marginBottom: 'var(--space-4xl)' }}>
-        <h1 style={{ marginBottom: 'var(--space-lg)' }}>{post.title}</h1>
-        <time>
-          {new Date(post.date).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-          })}
-        </time>
+      <header className="intro">
+        <h1 className="wordmark">{post.title}</h1>
+        <p className="role">
+          <time>
+            {new Date(post.date).toLocaleDateString('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+        </p>
       </header>
 
-      <div style={{
-        maxWidth: '680px',
-      }}>
-        <MDXRemote source={post.content} />
-      </div>
+      <MDXRemote source={post.content} />
     </article>
   )
 }
