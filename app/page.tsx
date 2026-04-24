@@ -4,19 +4,19 @@ import { getAllPosts } from './lib/posts'
 const projects = [
   {
     title: 'Edge Computer Vision Platform',
-    description: 'Distributed inference pipeline running computer-vision models on fleet-deployed edge devices.',
+    description: 'Fleet-scale inference running computer-vision models on devices deployed in the wild.',
     year: '2026',
     href: '#',
   },
   {
     title: 'Crop Signal Platform',
-    description: 'Cloud infrastructure for ingesting and processing optical remote-sensing data from controlled-environment agriculture.',
+    description: 'Turning optical remote-sensing data from polytunnels and glasshouses into something a grower can act on.',
     year: '2024',
     href: '#',
   },
   {
     title: 'IoT Telemetry on AWS',
-    description: 'Serverless telemetry pipeline on AWS IoT Core, Lambda, and DynamoDB handling millions of daily device events.',
+    description: 'A serverless backbone on AWS IoT Core and DynamoDB moving millions of device events a day without drama.',
     year: '2023',
     href: '#',
   },
@@ -58,18 +58,22 @@ export default function Home() {
       <section className="intro">
         <h1 className="wordmark">Jeremy Davidson</h1>
         <p className="role">
-          Principal Software Engineer &amp; Engineering Lead · Rocketboots
+          Principal Software Engineer at <em>Rocketboots</em>. Oxfordshire, UK.
         </p>
         <p className="bio">
-          Jeremy is a Principal Software Engineer and engineering lead focused on edge
-          computing, computer vision, and the infrastructure that turns research
-          prototypes into reliable production systems. He is Rocketboots&rsquo; first
-          UK/EMEA hire and writes occasionally on platform engineering, information
-          security, and life in the agritech and remote-sensing worlds.
+          Jeremy builds the quiet infrastructure that keeps computer-vision systems
+          honest &mdash; the pipelines, the edge fleet, the security boundaries, the small
+          decisions that compound into something people can actually rely on. He
+          earned that taste shipping remote-sensing platforms at Gardin and now does
+          it as Rocketboots&rsquo; first hire in Europe.
         </p>
         <p className="focus">
-          Currently building edge computing and computer vision infrastructure at
-          Rocketboots from Oxfordshire, UK.
+          <strong>Currently</strong> &mdash; edge computing and computer-vision
+          infrastructure at Rocketboots.{' '}
+          <strong>Previously</strong> &mdash; platform engineering and information
+          security at Gardin.{' '}
+          <strong>Always</strong> &mdash; Python, AWS, and a soft spot for Linux
+          boxes in polytunnels.
         </p>
       </section>
 
@@ -137,7 +141,8 @@ export default function Home() {
       <section id="connect">
         <h2 className="section-label">Get in touch</h2>
         <p className="bio">
-          The fastest way to reach Jeremy is by email at{' '}
+          Always up for a good conversation about infrastructure, agritech, remote
+          sensing, or why Python is still the right call. Reach out at{' '}
           <code>hello@jeremydavidson.dev</code>.
         </p>
         <p className="socials">
