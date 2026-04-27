@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import NavLinks from './NavLinks'
+import ScrollProgress from './ScrollProgress'
 
 export default function Navigation() {
   return (
@@ -7,12 +9,9 @@ export default function Navigation() {
         <Link href="/" className="site-nav__wordmark">
           Jeremy Davidson
         </Link>
-        <div className="site-nav__links">
-          <Link href="/#projects">Projects</Link>
-          <Link href="/#writing">Writing</Link>
-          <Link href="/#connect">Contact</Link>
-        </div>
+        <NavLinks />
       </div>
+      <ScrollProgress />
     </nav>
   )
 }

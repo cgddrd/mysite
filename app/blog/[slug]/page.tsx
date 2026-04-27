@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '../../lib/posts'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import InView from '../../components/InView'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -33,7 +34,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      <header className="intro">
+      <header className="intro section--centred">
         <h1 className="wordmark">{post.title}</h1>
         <p className="role">
           <time>
@@ -46,7 +47,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         </p>
       </header>
 
-      <MDXRemote source={post.content} />
+      <InView>
+        <MDXRemote source={post.content} />
+      </InView>
     </article>
   )
 }

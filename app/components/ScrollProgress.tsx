@@ -1,0 +1,20 @@
+'use client'
+
+import { motion, useScroll, useSpring } from 'motion/react'
+
+export default function ScrollProgress() {
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 220,
+    damping: 40,
+    mass: 0.4,
+  })
+
+  return (
+    <motion.div
+      className="scroll-progress"
+      style={{ scaleX, transformOrigin: '0% 50%' }}
+      aria-hidden
+    />
+  )
+}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Instrument_Serif } from 'next/font/google'
 import './globals.css'
 import Navigation from './components/Navigation'
+import Providers from './components/Providers'
 
 const instrumentSerif = Instrument_Serif({
   weight: '400',
@@ -26,8 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={instrumentSerif.variable}>
       <body>
-        <Navigation />
-        <main className="container">{children}</main>
+        <Providers>
+          <Navigation />
+          <main className="container">{children}</main>
+        </Providers>
       </body>
     </html>
   )
